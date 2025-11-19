@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Ryan F</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="scroll-page">
+  <a href="https://github.com/ryfank" class="top-left" target="_blank">
+    <img src="https://github.com/ryfank.png" alt="GitHub Profile" class="github-pic">
+  </a>
+
+  <div class="card">
+    <h1 class="fade-in name">Projects</h1>
+    <p class="fade-in tagline">A selection of my creative and technical work.</p>
+
+    <div class="projects-container">
+      <!-- Space Tetris Project -->
+      <div class="project-card fade-in">
+        <img src="spacetetris.gif" alt="Space Tetris" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title">Space Tetris</h3>
+          <p class="project-description">A cosmic themed twist on the classic Tetris game. 
+            Features space backgrounds and challenging gameplay mechanics. Built with Java, Python and raylib.</p>
+          <a href="https://github.com/ryfank/Space-Tetris" class="project-btn" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Lava Lamp Entropy Project -->
+      <div class="project-card fade-in">
+        <img src="lavalamp.gif" alt="Lava Lamp" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title">Lava Lamp Entropy</h3>
+          <p class="project-description">A visualization tool that uses lava lamp movements to generate cryptographic entropy. 
+            Combines art with cybersecurity principles in a unique implementation.</p>
+          <a href="https://github.com/ryfank/LavaLampEntropy" class="project-btn" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- CuddlyCustomizer Project -->
+      <div class="project-card fade-in">
+        <img src="cuddlycustomizer.gif" alt="Custom Plush Toy" class="project-image">
+        <div class="project-content">
+          <h3 class="project-title">CuddlyCustomizer</h3>
+          <p class="project-description">An interactive platform for designing custom little cuddly animals. 
+            Users can select colors, features, and accessories for their unique creations with an intuitive UI.</p>
+          <a href="https://github.com/ryfank/CuddlyCustomizer" class="project-btn" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+      
+      <!-- Adding more projects here later / in the future -->
+    </div>
+
+    <a href="index.html" class="home-btn fade-in">Home</a>
+  </div>
+
+  <a href="#" class="scroll-to-top" id="scrollToTop">↑</a>
+
+
+   <!-- scrolling up and down on page script -->
+  <script>
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>

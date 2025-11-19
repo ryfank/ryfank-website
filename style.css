@@ -1,0 +1,277 @@
+/* Fullscreen background */
+body {
+  margin: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background: url('image2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e2c4f0;
+  overflow: hidden; 
+}
+
+
+body.scroll-page {
+  align-items: flex-start; 
+  overflow-y: auto; 
+  padding: 20px 0;
+}
+
+/* Top-left GitHub profile */
+.top-left {
+  position: fixed; 
+  top: 20px;
+  left: 20px;
+  z-index: 1000; 
+}
+
+.github-pic {
+  width: 180px; 
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.85);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 15px rgba(255,200,220,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.github-pic:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.5), 0 0 18px rgba(255,200,220,0.4);
+}
+
+
+body.scroll-page .top-left {
+  position: fixed;
+}
+
+body.scroll-page .top-left {
+  position: fixed;
+}
+
+/* Center card (business card style) */
+.card {
+  background: rgba(30, 20, 60, 0.75);
+  padding: 40px 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  
+}
+
+body.scroll-page .card {
+  margin: 80px auto 40px;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+.fade-in.name {
+  animation-delay: 0.3s;
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  margin: 0 0 10px;
+}
+
+.fade-in.role {
+  animation-delay: 0.8s;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 5px;
+}
+
+.fade-in.tagline {
+  animation-delay: 1.2s;
+  font-size: 0.9rem;
+  color: #d0c0ff;
+  margin: 0 0 20px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Project buttons = simple business card style */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.project-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.project-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* PROJECT CARDS STYLE */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  flex-grow: 1;
+  color: #d0c0ff;
+}
+
+.project-card .project-btn {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  font-size: 0.9rem;
+  align-self: flex-start;
+}
+
+.project-card .project-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.home-btn {
+  margin-top: 40px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.home-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* SCROLL TO TOP BUTTON */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Smooth scrolling for the whole site */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+  
+  body.scroll-page .card {
+    padding: 30px 25px;
+    margin: 100px auto 40px;
+  }
+  
+  .github-pic {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
